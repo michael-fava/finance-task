@@ -22,9 +22,6 @@ public class Account {
     @Column(name = "account_id")
     private Long accountId;
 
-    @Column(name = "client_id")
-    private Long clientId;
-
     @Enumerated(EnumType.STRING)
     @Column(name = "account_type", length = 20, nullable = false)
     private AccountType accountType;

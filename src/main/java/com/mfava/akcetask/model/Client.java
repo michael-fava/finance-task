@@ -35,11 +35,9 @@ public class Client {
     @JoinColumn(name = "secondary_address", referencedColumnName = "address_id", nullable = true)
     private Address secondaryAddress;
 
-    @ElementCollection(targetClass = Account.class)
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.DETACH, targetEntity = Account.class)
     @JoinTable(name = "client_accounts",
-            joinColumns = {@JoinColumn(name = "client_id", referencedColumnName = "client_id")},
-            inverseJoinColumns = {@JoinColumn(name = "account_id", referencedColumnName = "account_id", unique = true)})
+            joinColumns = {@JoinColumn(name = "client_id", referencedColumnName = "client_id")})
     private List<Account> accountList;
 
 }

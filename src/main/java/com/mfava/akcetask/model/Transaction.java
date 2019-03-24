@@ -19,7 +19,8 @@ public class Transaction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @Column(name = "id")
+    private long transactionId;
 
     @ManyToOne(cascade = CascadeType.DETACH)
     @JoinColumn(name = "debit_account", referencedColumnName = "account_id", nullable = false)
