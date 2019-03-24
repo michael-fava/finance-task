@@ -1,0 +1,1 @@
+INSERT INTO public.country (country_name) VALUES ('Malta');
