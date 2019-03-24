@@ -1,10 +1,10 @@
 package com.mfava.akcetask.repo;
 
-import com.mfava.akcetask.model.Audit_Log;
+import com.mfava.akcetask.model.AuditLog;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface AuditLogRepository extends JpaRepository<Audit_Log, Long> {
+public interface AuditLogRepository extends JpaRepository<AuditLog, Long> {
 
 }
