@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.hateoas.ResourceSupport;
 
 import java.util.Date;
 
@@ -11,11 +12,12 @@ import java.util.Date;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class TransactionBo {
+public class TransactionBo extends ResourceSupport {
 
-    private long id;
-    private AccountBo debitAccount;
-    private AccountBo creditAccount;
+    private Long transactionId;
+    private Long debitAccount;
+    private Long creditAccount;
+    private BalanceStatus transactionType;
     private Double amount;
     private String message;
     private Date dateCreated;

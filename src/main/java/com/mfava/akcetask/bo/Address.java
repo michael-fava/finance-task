@@ -12,7 +12,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Address {
 
-    private long addressId;
     private String addressLine1;
     private String addressLine2;
     private String city;
