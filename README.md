@@ -32,6 +32,8 @@ Rest Micro-Service providing functionality to create clients & accounts and perf
 
 Build a jar by executing maven clean and install.
 
+Create database 'finance_test' in postgres.
+
 Execute the created jar using the command: java -jar finance-task-0.0.1-SNAPSHOT.jar
 
 ## Using the APIs provided
